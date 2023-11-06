@@ -8,7 +8,7 @@ pipeline {
 
         stage('build image'){
             steps{
-                sh 'docker build -t jenkins-test:latest .'
+                sh 'docker build -t $DOCKERHUB_CREDENTIALS_USR/jenkins-test:latest .'
                 sh 'docker images'
                 
             }
