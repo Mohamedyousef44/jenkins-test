@@ -11,7 +11,7 @@ pipeline {
                     checkout scm
                     // Access the commit ID
                     def commitId = currentBuild.changeSets[0].revisions[0].SHA1
-                    echo "Commit ID: ${commitId}"
+                    sh ' echo Commit ID: ${commitId}'
                 }
             }
         }
